@@ -4,6 +4,9 @@
   "description": "Write node apps with es6",
   "main": "src/index.js",
   "scripts": {
+    "webpack": "webpack",
+    "start:webpack": "npm run webpack -- --env.mode=development",
+    "build": "npm run webpack -- --env.mode=production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard src/**/*"
   },
@@ -23,6 +26,11 @@
   },
   "homepage": "https://github.com/arkgast/node-es6-starter#readme",
   "devDependencies": {
-    "standard": "^11.0.1"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "standard": "^11.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
   }
 }
