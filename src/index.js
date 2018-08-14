@@ -1,3 +1,3 @@
-const init = 'Welcome es6!'
+const init = 'Welcome node & es6!'
 
-console.log(`==== ${init} ====`)
+console.log(`<==== ${init} ====>`)
