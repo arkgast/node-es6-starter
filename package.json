@@ -4,7 +4,8 @@
   "description": "Write node apps with es6",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard src/**/*"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/arkgast/node-es6-starter/issues"
   },
-  "homepage": "https://github.com/arkgast/node-es6-starter#readme"
+  "homepage": "https://github.com/arkgast/node-es6-starter#readme",
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
 }
