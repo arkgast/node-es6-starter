@@ -1,0 +1,24 @@
+{
+  "name": "node-es6-starter",
+  "version": "0.1.0",
+  "description": "Write node apps with es6",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkgast/node-es6-starter.git"
+  },
+  "keywords": [
+    "node",
+    "es6",
+    "standardjs"
+  ],
+  "author": "Arnold Gandarillas Castillo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arkgast/node-es6-starter/issues"
+  },
+  "homepage": "https://github.com/arkgast/node-es6-starter#readme"
+}
