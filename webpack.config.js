@@ -1,21 +1,22 @@
-const path = require('path')
+const { resolve } = require('path')
+const webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals')
 
 const config = {
-  entry: './src/index.js',
+  entry: resolve(__dirname, 'src/index.js'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  target: 'node',
+  externals: [nodeExternals()],
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
+          loader: 'babel-loader'
         }
       }
     ]
@@ -25,6 +26,9 @@ const config = {
 module.exports = env => {
   if (env.mode === 'development') {
     config.devtool = 'source-map'
+    config.plugins = [
+      new webpack.HotModuleReplacementPlugin()
+    ]
   } else {
     config.devtool = 'cheap-source-map'
   }

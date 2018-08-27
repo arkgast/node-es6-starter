@@ -1,3 +1,11 @@
-const init = 'Welcome node & es6!'
+import express from 'express'
 
-console.log(`<==== ${init} ====>`)
+const app = express()
+
+app.get('/', (req, res) => {
+  res.send({message: 'This is amazing!'})
+})
+
+app.listen(5000, () => {
+  console.log('Server is running on port: 5000')
+})
